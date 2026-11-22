@@ -1,0 +1,18 @@
+[package]
+name = "network-discovery"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+network-core = { path = "../network-core" }
+anyhow = { workspace = true }
+serde = { workspace = true }
+tracing = { workspace = true }
+tokio = { workspace = true }
+chrono = { workspace = true }
+ipnet = { workspace = true }
+surge-ping = { workspace = true }
+mdns-sd = { workspace = true }
+dns-lookup = { workspace = true }
+

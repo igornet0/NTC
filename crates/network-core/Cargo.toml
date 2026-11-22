@@ -1,0 +1,16 @@
+[package]
+name = "network-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+serde = { workspace = true }
+tracing = { workspace = true }
+tokio = { workspace = true }
+ipnet = { workspace = true }
+network-interface = { workspace = true }
+default-net = { workspace = true }
+

@@ -1,0 +1,16 @@
+[package]
+name = "network-topology"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+network-core = { path = "../network-core" }
+network-discovery = { path = "../network-discovery" }
+router-manager = { path = "../router-manager" }
+wifi-scanner = { path = "../wifi-scanner" }
+anyhow = { workspace = true }
+serde = { workspace = true }
+tracing = { workspace = true }
+ipnet = { workspace = true }
+

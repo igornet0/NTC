@@ -1,0 +1,44 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/network-core",
+    "crates/network-discovery",
+    "crates/router-manager",
+    "crates/wifi-scanner",
+    "crates/device-fingerprint",
+    "crates/network-topology",
+    "crates/network-storage",
+    "crates/ntc-cli",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+authors = ["igornet0"]
+repository = "https://github.com/igornet0/NTC"
+
+[workspace.dependencies]
+anyhow = "1"
+thiserror = "1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+tokio = { version = "1", features = ["full"] }
+chrono = { version = "0.4", features = ["serde"] }
+ipnet = { version = "2", features = ["serde"] }
+network-interface = "1"
+default-net = "0.22"
+surge-ping = "0.8"
+mdns-sd = "0.11"
+dns-lookup = "2"
+reqwest = { version = "0.12", default-features = false, features = ["rustls-tls", "json", "charset"] }
+rusqlite = { version = "0.32", features = ["bundled"] }
+clap = { version = "4", features = ["derive"] }
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+strip = "symbols"
+
